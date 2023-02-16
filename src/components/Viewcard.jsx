@@ -1,8 +1,6 @@
 import React from "react";
-import { Fetch } from "./Fetch";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
-// import nftdata from "../abi.json";
 import { Web3Storage } from "web3.storage";
 import { WEB3STORAGE_TOKEN } from "../../constants";
 import axios from "axios";

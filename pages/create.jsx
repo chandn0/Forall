@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
-import Image from "next/image";
-import { StoreContent } from "../src/components/StoreContent";
 import { StoreMetadata } from "../src/components/StoreMetadata";
-import { MintNFT2 } from "../src/components/MintNFT2";
-import { MintNFT3 } from "../src/components/MintNFT3";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ethers } from "ethers";

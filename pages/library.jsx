@@ -1,14 +1,9 @@
 import React from "react";
-import Song from "../src/components/Song";
 import styles from "../styles/Home.module.css";
-import { ListNFT } from "../src/components/ListNFT";
-import { FetchNFTs } from "../src/components/ListNFT2";
-import { Fetch } from "../src/components/Fetch";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import nftdata from "../abi.json";
 import Viewcard from "../src/components/Viewcard";
-// import { AudioPlayer } from "reactjs-media";
 
 
 export default function Library() {

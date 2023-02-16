@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../styles/Home.module.css";
 import Link from "next/link";
-import Image from "next/image";
-import UNSD from "../components/UNSD";
 
 export default function Layout({ children }) {
   const [isExpanded, setIsExpanded] = useState(false);
