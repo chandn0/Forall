@@ -1,14 +1,8 @@
 {
-    "address": "0x35e400566C8370AFC2e4A941574CCe27Bb0e702a",
+    "address": "0xAe43573AA5844891E16D200D7651B905975D1b81",
     "abi": [
         {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "nft",
-                    "type": "address"
-                }
-            ],
+            "inputs": [],
             "stateMutability": "nonpayable",
             "type": "constructor"
         },
@@ -112,6 +106,11 @@
                     "internalType": "address",
                     "name": "to",
                     "type": "address"
+                },
+                {
+                    "internalType": "string",
+                    "name": "uri",
+                    "type": "string"
                 }
             ],
             "name": "safeMint",
@@ -189,19 +188,6 @@
             "type": "function"
         },
         {
-            "inputs": [
-                {
-                    "internalType": "string",
-                    "name": "sentence",
-                    "type": "string"
-                }
-            ],
-            "name": "submitSentence",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
             "anonymous": false,
             "inputs": [
                 {
@@ -263,47 +249,16 @@
             "type": "function"
         },
         {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "nft",
-                    "type": "address"
-                }
-            ],
-            "name": "updateNFT",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "newowner",
-                    "type": "address"
-                }
-            ],
-            "name": "updateowner",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [
+            "inputs": [],
+            "name": "_tokenIdCounter",
+            "outputs": [
                 {
                     "internalType": "uint256",
-                    "name": "id",
+                    "name": "_value",
                     "type": "uint256"
-                },
-                {
-                    "internalType": "bool",
-                    "name": "vote",
-                    "type": "bool"
                 }
             ],
-            "name": "votefunction",
-            "outputs": [],
-            "stateMutability": "nonpayable",
+            "stateMutability": "view",
             "type": "function"
         },
         {
@@ -320,19 +275,6 @@
                     "internalType": "uint256",
                     "name": "",
                     "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "downer",
-            "outputs": [
-                {
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
                 }
             ],
             "stateMutability": "view",
@@ -383,38 +325,12 @@
         },
         {
             "inputs": [],
-            "name": "Mytoken",
-            "outputs": [
-                {
-                    "internalType": "contract MyToken",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
             "name": "name",
             "outputs": [
                 {
                     "internalType": "string",
                     "name": "",
                     "type": "string"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "NFTaddress",
-            "outputs": [
-                {
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
                 }
             ],
             "stateMutability": "view",
@@ -455,40 +371,6 @@
         {
             "inputs": [
                 {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "name": "sentenceList",
-            "outputs": [
-                {
-                    "internalType": "string",
-                    "name": "ipfslink",
-                    "type": "string"
-                },
-                {
-                    "internalType": "address",
-                    "name": "creator",
-                    "type": "address"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "yesvotes",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "novotes",
-                    "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
                     "internalType": "bytes4",
                     "name": "interfaceId",
                     "type": "bytes4"
@@ -519,6 +401,26 @@
             "type": "function"
         },
         {
+            "inputs": [],
+            "name": "tokencounter",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "_value",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct Counters.Counter",
+                    "name": "",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
             "inputs": [
                 {
                     "internalType": "uint256",
@@ -532,41 +434,6 @@
                     "internalType": "string",
                     "name": "",
                     "type": "string"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "viewsentence",
-            "outputs": [
-                {
-                    "components": [
-                        {
-                            "internalType": "string",
-                            "name": "ipfslink",
-                            "type": "string"
-                        },
-                        {
-                            "internalType": "address",
-                            "name": "creator",
-                            "type": "address"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "yesvotes",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "novotes",
-                            "type": "uint256"
-                        }
-                    ],
-                    "internalType": "struct TruthOrFalse.Sentence[]",
-                    "name": "",
-                    "type": "tuple[]"
                 }
             ],
             "stateMutability": "view",

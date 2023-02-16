@@ -3,15 +3,15 @@ import { useState } from "react";
 import { NFTStorage } from "nft.storage";
 import { NFT_STORAGE_API_KEY } from "../../constants";
 /// used NFT.storage to prepare the metadata for the NFT
-export const StoreMetadata = async (poster, Name, audioCID, Description) => {
+export const StoreMetadata = async (poster, Name, Description, ipfslinks) => {
   // const nftstorage_key = process.env.NFT_STORAGE_API_KEY;
 
   console.log("Preparing Metadata ....");
   const nft = {
     image: poster,
     name: Name,
-    description: `The music file is stored here : ${audioCID} . & ${Description} .Check more details on the website`,
-    external_url: audioCID,
+    description: Description,
+    proofs: ipfslinks,
   };
   console.log("Uploading Metadata to IPFS ....");
   const client = new NFTStorage({ token: NFT_STORAGE_API_KEY });
