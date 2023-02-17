@@ -8,7 +8,6 @@ import Viewcard from "../src/components/Viewcard";
 
 export default function Library() {
   const [songs, setSongs] = useState([]);
-  const [data, setData] = useState({});
   async function create() {
 
     try {
@@ -41,9 +40,8 @@ export default function Library() {
             )
           }))
             : (
-              <a>No Songs Found </a>
+              <a>Loading </a>
             )}
-          {/* <Song /> */}
         </div>
       </div>
     </>

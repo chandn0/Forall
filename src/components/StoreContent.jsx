@@ -10,10 +10,10 @@ function MakeStorageClient() {
 }
 
 export const StoreContent = async (files) => {
-  console.log("Uploading Audio to IPFS with web3.storage....");
+  console.log("Uploading  IPFS ");
   const client = MakeStorageClient();
   const cid = await client.put([files]);
   console.log("stored files with cid:", cid);
-  console.log("Song Uploaded ton IPFS successfully 🚀🚀");
+  console.log("Uploaded to IPFS ");
   return cid;
 };

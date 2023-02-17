@@ -22,7 +22,7 @@ export default function Layout({ children }) {
       <header>
         <nav className={styles.navbar}>
           <span className={styles.logo}>
-            <Link href={"/"}>music3</Link>
+            <Link href={"/"}>Proof</Link>
           </span>
           <ul
             className={
@@ -38,31 +38,14 @@ export default function Layout({ children }) {
             </li>
             <li className={styles.navitem}>
               <Link href="/create">
-                <a className={styles.navlink}>Create</a>
+                <a className={styles.navlink}>Submit</a>
               </Link>
             </li>
             <li className={styles.navitem}>
               <Link href="/library">
-                <a className={styles.navlink}>Library</a>
+                <a className={styles.navlink}>View</a>
               </Link>
             </li>
-            <li className={styles.navitem}>
-              <span>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://github.com/kushagrasarathe/hackfs-project"
-                  className={styles.navlink}
-                >
-                  GitHub
-                </a>
-              </span>
-            </li>
-            {/* <li className={styles.navitem}>
-              <span>
-                <UNSD />
-              </span>
-            </li> */}
             <li className={styles.navitem}>
               <a className={styles.navlink}>
                 {" "}
@@ -73,7 +56,7 @@ export default function Layout({ children }) {
                 ) : (
                   <a className={styles.connectButtontext}>
                     {" "}
-                    Address : {address.slice(0, 6)}....{address.slice(38)}{" "}
+                    {address.slice(0, 6)}.{address.slice(38)}{" "}
                   </a>
                 )}
               </a>
@@ -102,23 +85,13 @@ export default function Layout({ children }) {
           Built by{" "}
           <a
             target="_blank"
-            href="https://twitter.com/0xdhruva"
+            href="https://twitter.com/Chandan1_"
             rel="noopener noreferrer"
           >
-            Dhruv Agarwal
+            Chandan
           </a>
-          <span>&</span>
-          <a
-            target="_blank"
-            href="https://twitter.com/kushagrasarathe"
-            rel="noopener noreferrer"
-          >
-            Kushagra Sarathe
-          </a>
-          &#9749;
         </footer>
       </div>
-      {/* <footer className="footer">Kusahgra</footer> */}
     </>
   );
 }

@@ -16,59 +16,47 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Music3</title>
-        <meta name="description" content="Music Upload to IPFS" />
+        <title>Proof</title>
+        <meta name="description" content="ipfs and NFTs" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.logo}>music3</h1>
         <div className={styles.hero_img}>
-          <Image src={landing} />
+          {/* <Image src={landing} /> */}
         </div>
         <h3 className={styles.heading}>
-          Upload and share music over Decentralized Internet
+          Did you find someone misusing their power, but you don't have the courage to speak up?
+          <br />
+          <br />
+          Don't worry, submit the proof and let others take charge.
         </h3>
-        <div className={styles.soundIcon}>
-          <div className={styles.soundWave}>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-            <i className={styles.wavebar}></i>
-          </div>
-        </div>
-        <Link href={'/create'}>
+
+        {/* <Link href={'/create'}>
 
           <button className={styles.button}>Upload Now</button>
-      </Link>
+        </Link> */}
       </main>
       <div className={styles.features}>
-        <h2 className={styles.heading}>Key Features</h2>
+        {/* <h2 className={styles.heading}>Key Features</h2> */}
         <ul className={styles.feature}>
-          <li>Store music on IPFS in single Click</li>
-          <li>Get music cover as NFT dropped in your wallet</li>
-          <li>Download songs from song library</li>
-          <li>All of this on Polygon Main Chain</li>
+          <li>You real world identity can't be traced</li>
+          <li>Proofs are stored in form of NFT allowing you to trade</li>
+          <li>All the proofs are stored on-chain can't be Destroyed</li>
         </ul>
-        <Link href={'/library'}>
+        {/* <Link href={'/library'}>
           <button className={styles.button}>Music Library</button>
-        </Link>
+        </Link> */}
+      </div>
+      <div className={styles.features}>
+        <h2 className={styles.heading}>How you can Upload</h2>
+        <ul className={styles.feature}>
+          <li>First upload you proofs to IPFS and save CIDs </li>
+          <li>Move to submit page </li>
+          <li>Add Title,Description and create an image and add the CID links </li>
+          <li>Click on mint </li>
+        </ul>
+
       </div>
 
       <div className={styles.sponsors}>
@@ -87,15 +75,6 @@ export default function Home() {
           <div className={styles.sponsor}>
             <Image src={web3storage} />
             Web3.Storage
-          </div>
-          <div className={styles.sponsor}>
-            <Image src={nftport} />
-          </div>
-          <div className={styles.sponsor}>
-            <Image src={spheron } />
-          </div>
-          <div className={`${styles.sponsor} ${styles.valist}`}>
-            <Image src={valist } />
           </div>
         </div>
       </div>
