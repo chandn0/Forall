@@ -1,16 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-import landing from "../src/assets/music3.png";
 import nftstorage from "../src/assets/nftstorage.svg";
 import web3storage from "../src/assets/web3storage.svg";
 import polygon from "../src/assets/polygon.svg";
-import nftport from "../src/assets/nftport.svg";
 import ipfs from "../src/assets/ipfs.png";
-import spheron from "../src/assets/spheron.svg";
-import valist from "../src/assets/valist.png";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-// import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export default function Home() {
   return (
