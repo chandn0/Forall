@@ -11,7 +11,6 @@ function MakeStorageClient() {
 
 export const Fetch = async (cid) => {
     try {
-        console.log("Uploading Audio to IPFS with web3.storage....");
         console.log(cid)
         const tt = cid.replace("://", "/");
         let dd = await axios.get(`https://gateway.ipfs.io/${tt}`);

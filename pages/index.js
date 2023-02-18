@@ -5,7 +5,6 @@ import web3storage from "../src/assets/web3storage.svg";
 import polygon from "../src/assets/polygon.svg";
 import ipfs from "../src/assets/ipfs.png";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -26,11 +25,6 @@ export default function Home() {
           <br />
           Don't worry, submit the proof and let others take charge.
         </h3>
-
-        {/* <Link href={'/create'}>
-
-          <button className={styles.button}>Upload Now</button>
-        </Link> */}
       </main>
       <div className={styles.features}>
         {/* <h2 className={styles.heading}>Key Features</h2> */}
@@ -39,9 +33,6 @@ export default function Home() {
           <li>Proofs are stored in form of NFT allowing you to trade</li>
           <li>All the proofs are stored on-chain can't be Destroyed</li>
         </ul>
-        {/* <Link href={'/library'}>
-          <button className={styles.button}>Music Library</button>
-        </Link> */}
       </div>
       <div className={styles.features}>
         <h2 className={styles.heading}>How you can Upload</h2>

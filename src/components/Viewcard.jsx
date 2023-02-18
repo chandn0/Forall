@@ -6,6 +6,7 @@ import { WEB3STORAGE_TOKEN } from "../../constants";
 import axios from "axios";
 import nftdata from "../../abi.json";
 import styles from "../../styles/Home.module.css";
+import { useRouter } from 'next';
 
 export default function Viewcard({ data }) {
 
@@ -42,7 +43,11 @@ export default function Viewcard({ data }) {
             setName(data.name);
             setDescription(data.description);
             setImage(`https://gateway.ipfs.io/${data.image}`);
-            setIpfslinks(data.proofs);
+            var list = [];
+            data.proofs.forEach(element => {
+                list.push(`https://gateway.ipfs.io/ipfs/${element}`);
+            });
+            setIpfslinks(list);
             console.log(data);
 
         } catch (err) {
@@ -50,27 +55,35 @@ export default function Viewcard({ data }) {
         }
     };
     useEffect(() => {
-
         fetchNFTs();
     }, []);
+
 
     return (
         <>
             <div >
                 {name ? (
                     <div>
-                        <div className={styles.row}>
-                            <div className={styles.column}>
-                                <div>Name: {name}</div>
-                                <div>Description: {description}</div>
+                        <div className={styles.card} >
+                            <div className={styles.card__content}>
+
+                                <div className={styles.card__name}>Name: {name}</div>
+                                <div className={styles.card__description}>Description: {description}</div>
                                 IPFS-Links:
+                                <br />
                                 {
                                     ipfslinks.map((ipfslink, i) => {
-                                        return <div key={i}><a >{ipfslink}</a></div>
+                                        return <div key={i}><a
+                                            target="_blank"
+                                            href={ipfslink}
+                                            rel="noopener noreferrer"
+                                        >{i + 1}.{ipfslink}</a></div>
                                     })
                                 }
                             </div>
-                            <div className={styles.rcolumn}>
+
+
+                            <div className={styles.card__image}>
                                 <img width="400px" src={image}></img>
                             </div>
                         </div>

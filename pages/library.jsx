@@ -7,7 +7,7 @@ import Viewcard from "../src/components/Viewcard";
 
 
 export default function Library() {
-  const [songs, setSongs] = useState([]);
+  const [data, setdata] = useState([]);
   async function create() {
 
     try {
@@ -19,7 +19,7 @@ export default function Library() {
       for (let i = 0; i < parseInt(ledger); i++) {
         tt.push(i);
       }
-      setSongs(tt);
+      setdata(tt);
       console.log(parseInt(ledger));
     } catch (err) {
       console.error(err);
@@ -34,7 +34,7 @@ export default function Library() {
       <div className={styles.song_section}>
         <h1 className={styles.heading}>Song Library</h1>
         <div >
-          {songs ? (songs.map((song, key) => {
+          {data ? (data.map((song, key) => {
             return (
               <Viewcard data={song} key={key} />
             )
