@@ -41,6 +41,11 @@ export default function Home() {
           <li>Move to submit page </li>
           <li>Add Title,Description and create an image and add the CID links </li>
           <li>Click on mint </li>
+          <li>The contract Address: <a
+            target="_blank"
+            href={"https://etherscan.io/address/0x5f64a2f3c1b0e7b6e6b7b3d5a6f5afef099e4b36"}
+            rel="noopener noreferrer"
+          >Etherscan</a></li>
         </ul>
 
       </div>
