@@ -33,7 +33,6 @@ export default function Library() {
   return (
     <>
       <div className={styles.song_section}>
-        <h1 className={styles.heading}>Song Library</h1>
         <div >
           {data ? (data.map((song, key) => {
             return (
