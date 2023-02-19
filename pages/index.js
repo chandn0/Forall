@@ -28,8 +28,11 @@ export default function Home() {
         {/* <h2 className={styles.heading}>Key Features</h2> */}
         <ul className={styles.mainfeature}>
           <li>To ensure your anonymity, we do not require you to reveal your real-world identity when submitting your evidence. We take this protection very seriously and use a variety of security measures to safeguard your identity.</li>
+          <br />
           <li>In addition, all proofs submitted to our platform are stored in the form of NFTs (Non-Fungible Tokens), a type of digital asset that provides unique ownership and authenticity to the content. This means that you can retain ownership of your proof and even trade it if you wish to do so.</li>
+          <br />
           <li>Moreover, all the proofs submitted to our platform are stored on-chain, meaning that they are recorded on a blockchain, a decentralized and tamper-proof digital ledger. This ensures that your proof cannot be destroyed, altered, or lost.</li>
+          <br />
           <li>With our platform, you can take a stand against misconduct and make a difference while protecting your anonymity and your evidence.</li>
         </ul>
       </div>

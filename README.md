@@ -1,35 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## If you have evidence of someone misusing their power but feel hesitant to speak up due to concerns about potential repercussions, our platform provides a safe and anonymous way to report the misconduct. By submitting your proof, you can empower others to take action and hold the individual accountable
 
-## Getting Started
+## To ensure your anonymity, we do not require you to reveal your real-world identity when submitting your evidence. We take this protection very seriously and use a variety of security measures to safeguard your identity.
 
-First, run the development server:
+## In addition, all proofs submitted to our platform are stored in the form of NFTs (Non-Fungible Tokens), a type of digital asset that provides unique ownership and authenticity to the content. This means that you can retain ownership of your proof and even trade it if you wish to do so.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Moreover, all the proofs submitted to our platform are stored on-chain, meaning that they are recorded on a blockchain, a decentralized and tamper-proof digital ledger. This ensures that your proof cannot be destroyed, altered, or lost.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## With our platform, you can take a stand against misconduct and make a difference while protecting your anonymity and your evidence.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## How you can Upload
+1. First upload you proofs to IPFS and save CIDs
+2. Move to submit page
+3. Add Title,Description and create an image and add the CID links
+4. Click on mint
+5. The contract Address: Mumbai_Scan
 
