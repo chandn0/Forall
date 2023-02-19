@@ -15,11 +15,12 @@ export default function Layout({ children }) {
       method: "eth_requestAccounts",
     });
     console.log(window.ethereum.networkVersion);
-    const chainId = 80001
+    const chainId = 80001;
 
-    if (window.ethereum.networkVersion !== chainId) {
+    if ((window.ethereum.networkVersion) != chainId) {
       console.log("not connected to Mumbai Testnet");
       alert("Please connect to Mumbai Testnet");
+
       try {
         await window.ethereum.request({
           method: 'wallet_switchEthereumChain',

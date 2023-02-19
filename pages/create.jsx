@@ -55,9 +55,9 @@ export default function Create() {
   };
 
   const mintNFT = async (metadataURI, userAddress) => {
-    const chainId = 80001
+    const chainId = 80001;
 
-    if (!window.ethereum.networkVersion == chainId) {
+    if ((window.ethereum.networkVersion) == chainId) {
       try {
         const accounts = await window.ethereum.request({
           method: "eth_requestAccounts",
