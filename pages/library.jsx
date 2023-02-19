@@ -11,8 +11,9 @@ export default function Library() {
   async function create() {
 
     try {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const contract = new ethers.Contract(nftdata.address, nftdata.abi, provider);
+      var customHttpProvider = new ethers.providers.JsonRpcProvider("https://rpc-mumbai.maticvigil.com/v1/d0d3166eb686b4ef12177368021eb1043b95c067");
+      // const provider = new ethers.providers.Web3Provider("https://rpc-mumbai.maticvigil.com/v1/d0d3166eb686b4ef12177368021eb1043b95c067");
+      const contract = new ethers.Contract(nftdata.address, nftdata.abi, customHttpProvider);
       let ledger = await contract.tokencounter();
 
       const tt = [];

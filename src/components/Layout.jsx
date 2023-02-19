@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../styles/Home.module.css";
 import Link from "next/link";
+import { ethers } from "ethers";
 
 export default function Layout({ children }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -13,6 +14,34 @@ export default function Layout({ children }) {
     const accounts = await window.ethereum.request({
       method: "eth_requestAccounts",
     });
+    console.log(window.ethereum.networkVersion);
+    const chainId = 80001
+
+    if (window.ethereum.networkVersion !== chainId) {
+      console.log("not connected to Mumbai Testnet");
+      alert("Please connect to Mumbai Testnet");
+      try {
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: ethers.utils.toHex(chainId) }]
+        });
+      } catch (err) {
+        // This error code indicates that the chain has not been added to MetaMask
+        if (err.code === 4902) {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [
+              {
+                chainName: 'Mumbai Testnet',
+                chainId: ethers.utils.toHex(chainId),
+                nativeCurrency: { name: 'MATIC', decimals: 18, symbol: 'MATIC' },
+                rpcUrls: ['https://polygon-rpc.com/']
+              }
+            ]
+          });
+        }
+      }
+    }
     console.log({ accounts });
     setAddress(accounts[0]);
   }
