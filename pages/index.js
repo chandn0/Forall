@@ -20,18 +20,18 @@ export default function Home() {
           {/* <Image src={landing} /> */}
         </div>
         <h3 className={styles.heading}>
-          Did you find someone misusing their power, but you don't have the courage to speak up?
+          Did you find someone misusing their power, but you do not have the courage to speak up?
           <br />
           <br />
-          Don't worry, submit the proof and let others take charge.
+          Submit the proof and let others take charge.
         </h3>
       </main>
       <div className={styles.features}>
         {/* <h2 className={styles.heading}>Key Features</h2> */}
         <ul className={styles.feature}>
-          <li>You real world identity can't be traced</li>
+          <li>You real world identity can not  be traced</li>
           <li>Proofs are stored in form of NFT allowing you to trade</li>
-          <li>All the proofs are stored on-chain can't be Destroyed</li>
+          <li>All the proofs are stored on-chain can not be Destroyed</li>
         </ul>
       </div>
       <div className={styles.features}>
