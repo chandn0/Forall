@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ethers } from "ethers";
 import data from "../abi.json";
-
+import Head from "next/head";
 export default function Create() {
   const [address, setAddress] = useState("");
   const [loading, setLoading] = useState(false);
@@ -103,6 +103,11 @@ export default function Create() {
   return (
     <>
       <div className={styles.container}>
+        <Head>
+          <title>Proof</title>
+          <meta name="description" content="ipfs and NFTs" />
+          <link rel="icon" href="/power.png" />
+        </Head>
         <main className={styles.main}>
 
           <h1 className={styles.heading}>Upload Proof</h1>

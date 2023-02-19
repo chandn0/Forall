@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import nftdata from "../abi.json";
 import Viewcard from "../src/components/Viewcard";
+import Head from "next/head";
 
 
 export default function Library() {
@@ -33,6 +34,11 @@ export default function Library() {
   return (
     <>
       <div className={styles.song_section}>
+        <Head>
+          <title>Proof</title>
+          <meta name="description" content="ipfs and NFTs" />
+          <link rel="icon" href="/power.png" />
+        </Head>
         <div >
           {data ? (data.map((song, key) => {
             return (
