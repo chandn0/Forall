@@ -55,28 +55,34 @@ export default function Create() {
   };
 
   const mintNFT = async (metadataURI, userAddress) => {
-    try {
-      const accounts = await window.ethereum.request({
-        method: "eth_requestAccounts",
-      });
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(data.address, data.abi, signer);
-      let ledger = await contract.safeMint(accounts[0], metadataURI);
-      await ledger.wait();
-      let tt = await provider.getTransactionReceipt(ledger.hash);
-      console.log(tt);
-      if (tt.status === 1) {
-        toast.success("submited sentence");
-        console.log("success");
-      } else {
-        toast.error("failed to submit sentence");
-        console.log("fail");
+    const chainId = 80001
+
+    if (!window.ethereum.networkVersion == chainId) {
+      try {
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(data.address, data.abi, signer);
+        let ledger = await contract.safeMint(accounts[0], metadataURI);
+        await ledger.wait();
+        let tt = await provider.getTransactionReceipt(ledger.hash);
+        console.log(tt);
+        if (tt.status === 1) {
+          toast.success("submited sentence");
+          console.log("success");
+        } else {
+          toast.error("failed to submit sentence");
+          console.log("fail");
+        }
+        setTxURL(response.transaction_external_url);
+        notify("NFT minted ");
+      } catch (err) {
+        console.log(err);
       }
-      setTxURL(response.transaction_external_url);
-      notify("NFT minted ");
-    } catch (err) {
-      console.log(err);
+    } else {
+      alert("Please connect to Mumbai Testnet");
     }
   };
 

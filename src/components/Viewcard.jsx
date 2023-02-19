@@ -14,6 +14,7 @@ export default function Viewcard({ data }) {
     const [description, setDescription] = useState("");
     const [image, setImage] = useState("");
     const [ipfslinks, setIpfslinks] = useState([]);
+    const [owner, setOwner] = useState("");
 
     function GetAccessToken() {
         return WEB3STORAGE_TOKEN;
@@ -29,6 +30,7 @@ export default function Viewcard({ data }) {
         // const provider = new ethers.providers.Web3Provider(window.ethereum);
         const contract = new ethers.Contract(nftdata.address, nftdata.abi, customHttpProvider);
         let ledger = await contract.tokenURI(data);
+        let k = data;
         console.log(ledger);
 
         try {
@@ -40,6 +42,7 @@ export default function Viewcard({ data }) {
                 description: dd.data.description,
                 image: dd.data.image.replace("://", "/"),
                 proofs: dd.data.proofs,
+                id: k,
             }
             setName(data.name);
             setDescription(data.description);
@@ -50,6 +53,9 @@ export default function Viewcard({ data }) {
             });
             setIpfslinks(list);
             console.log(data);
+            let owneraddress = await contract.ownerOf(data.id);
+            console.log(owneraddress);
+            setOwner(owneraddress);
 
         } catch (err) {
             console.log(err);
@@ -68,6 +74,11 @@ export default function Viewcard({ data }) {
                         <div className={styles.card} >
                             <div className={styles.card__content}>
 
+                                {owner ? (
+                                    <div className={styles.card__owner}>Owner: {owner}</div>
+                                ) : (
+                                    <div className={styles.card__owner}>Owner: Loading...</div>
+                                )}
                                 <div className={styles.card__name}>Name: {name}</div>
                                 <div className={styles.card__description}>Description: {description}</div>
                                 IPFS-Links:
@@ -92,7 +103,9 @@ export default function Viewcard({ data }) {
 
                     </div>
                 ) : (
-                    <div>Loading...</div>
+                    <div className={styles.card} >
+                        <div>Loading...</div>
+                    </div>
                 )}
 
 

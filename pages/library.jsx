@@ -41,7 +41,9 @@ export default function Library() {
             )
           }))
             : (
-              <a>Loading </a>
+              <div className={styles.card} >
+                <div>Loading...</div>
+              </div>
             )}
         </div>
       </div>
