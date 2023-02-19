@@ -70,10 +70,10 @@ export default function Create() {
         let tt = await provider.getTransactionReceipt(ledger.hash);
         console.log(tt);
         if (tt.status === 1) {
-          toast.success("submited sentence");
+          toast.success("Minted Nft");
           console.log("success");
         } else {
-          toast.error("failed to submit sentence");
+          toast.error("Failed to mint NFT");
           console.log("fail");
         }
         setTxURL(response.transaction_external_url);

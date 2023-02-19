@@ -73,13 +73,13 @@ export default function Viewcard({ data }) {
                     <div>
                         <div className={styles.card} >
                             <div className={styles.card__content}>
-
+                                <div className={styles.card__name}>Name: {name}</div>
                                 {owner ? (
                                     <div className={styles.card__owner}>Owner: {owner}</div>
                                 ) : (
                                     <div className={styles.card__owner}>Owner: Loading...</div>
                                 )}
-                                <div className={styles.card__name}>Name: {name}</div>
+                                <br />
                                 <div className={styles.card__description}>Description: {description}</div>
                                 IPFS-Links:
                                 <br />
@@ -96,7 +96,7 @@ export default function Viewcard({ data }) {
 
 
                             <div className={styles.card__image}>
-                                <img width="400px" src={image}></img>
+                                <img width="400px" height="400px" src={image}></img>
                             </div>
                         </div>
                         <br />
