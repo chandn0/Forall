@@ -281,6 +281,7 @@
   /* padding: 10px 0; */
   margin-bottom: 30px;
   font-weight: 700;
+  font-size: 17px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -444,7 +445,23 @@
   /* text-transform: uppercase; */
   text-align: center;
   /* font-size: 24px; */
-  background-color: #ffffff;
+  background-color: #d81414;
+
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+
+.mainheading {
+  display: inline-block;
+  margin: 10px auto;
+  font-weight: 1000;
+  font-size: 25px;
+  /* text-transform: uppercase; */
+  text-align: center;
+  /* font-size: 24px; */
+  background-color: #d81414;
   background-size: 1000% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
